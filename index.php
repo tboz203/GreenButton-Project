@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 
 	<title>Green Button Usage Comparisons</title>
-	
+
 	<!-- stylesheet css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -21,7 +21,7 @@
 
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	
+
 <!-- navigation -->
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
@@ -39,12 +39,12 @@
 				<li><a href="#service" class="smoothScroll">Energy Saving Form</a></li>
 				<li><a href="#portfolio" class="smoothScroll">Money Saving Tips</a></li>
 				<li><a href="#about" class="smoothScroll">Zipcode Comparisons</a></li>
-				
+
 
 			</ul>
 		</div>
 	</div>
-</div>		
+</div>
 
 <!-- home section -->
 <div id="home">
@@ -55,6 +55,11 @@
 				<h1><b>Green Button</b> Usage Comparisons</h1>
 				<p>This site provides money saving tips on energy usage and lets you compare with neighbors</p>
 				<a href="#service" class="btn btn-default smoothScroll">GET STARTED</a>
+				<form action="test.php" method="post" enctype="multipart/form-data">
+					Select a file:
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<input type="submit" value="Upload" name="submit">
+				</form>
 			</div>
 		</div>
 	</div>
@@ -100,7 +105,7 @@
 					</fieldset>
 			</center>
 			</form>
-	
+
 </div>
 
 
@@ -143,7 +148,7 @@
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
 				<p>
-                
+
                 <a rel="nofollow" href="http://www.tooplate.com" target="_parent"></a></p>
 			</div>
 		</div>
@@ -154,9 +159,9 @@
 <a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 
-<!-- javascript js -->	
+<!-- javascript js -->
 <script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>	
+<script src="js/bootstrap.min.js"></script>
 <script src="js/nivo-lightbox.min.js"></script>
 <script src="js/smoothscroll.js"></script>
 <script src="js/jquery.nav.js"></script>
