@@ -31,13 +31,14 @@
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
+			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:60px;height:60px;"></a>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#home" class="smoothScroll">Home</a></li>
-				<li><a href="help.php" class="smoothScroll">Help</a></li>
-				<li><a href="upload.php" class="smoothScroll">Step 1: Upload</a></li>
+				<li><a href="#service" class="smoothScroll">Energy Saving Form</a></li>
+				<li><a href="#portfolio" class="smoothScroll">Money Saving Tips</a></li>
+				<li><a href="#about" class="smoothScroll">Zipcode Comparisons</a></li>
 
 
 			</ul>
@@ -52,8 +53,8 @@
 			<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6">
 				<h2>Welcome to</h2>
 				<h1><b>Green Button</b> Usage Comparisons</h1>
-				<p>This site provides energy saving tips and energy bill comparisons</p>
-				<a href="upload.php" class="btn btn-default smoothScroll">GET STARTED</a>
+				<p>This site provides money saving tips on energy usage and lets you compare with neighbors</p>
+				<a href="#service" class="btn btn-default smoothScroll">GET STARTED</a>
 				
 			</div>
 		</div>
@@ -61,6 +62,16 @@
 </div>
 
 <!-- login section -->
+<div id="service">
+<center>
+<form action="test.php" method="post" enctype="multipart/form-data">
+					Select your GreenButton file to see the energy savings tips:
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<input type="submit" value="Upload" name="submit">
+				</form>
+			</center>
+
+</div>
 
 
 <!-- Daily/Weekly/Monthly section -->

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -31,13 +30,14 @@
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
+			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:60px;height:60px;"></a>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#home" class="smoothScroll">Home</a></li>
+				<li><a href="index.php" class="smoothScroll">Home</a></li>
 				<li><a href="help.php" class="smoothScroll">Help</a></li>
 				<li><a href="upload.php" class="smoothScroll">Step 1: Upload</a></li>
+				
 
 
 			</ul>
@@ -45,22 +45,33 @@
 	</div>
 </div>
 
-<!-- home section -->
-<div id="home">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6">
-				<h2>Welcome to</h2>
-				<h1><b>Green Button</b> Usage Comparisons</h1>
-				<p>This site provides energy saving tips and energy bill comparisons</p>
-				<a href="upload.php" class="btn btn-default smoothScroll">GET STARTED</a>
-				
-			</div>
-		</div>
-	</div>
-</div>
+
 
 <!-- login section -->
+<div id="service">
+<h1 style="margin-left:15%;"><b>Green Button Help Page</b></h1>
+<br>
+<br>
+<p style="font-size:18pt;">
+<ul style="font-size:18pt;">
+<li>
+The Green Button file is a secure way to get your energy usage data online.<br><br></li>
+<li>Simply, go to <a href="http://www.lus.org">www.lus.org</a> and login to your account then click on my usage.<br><br></li>
+<li>Click on the Green Button picture<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:30px;height:30px;"></a> and download data your data.</li>
+<br>
+<br>
+<li>
+For more information on Green Button and for a list of all the energy <br><br>providers that offer the Green Button file visit <a href="http://www.greenbutton.org">www.greenbutton.org</a>
+</li>
+</ul>
+</p>
+<br>
+<br>
+<br>
+<br>
+
+
+</div>
 
 
 <!-- Daily/Weekly/Monthly section -->
@@ -96,18 +107,7 @@
 	</div>
 </div>
 
-<!-- copyright section -->
-<div class="copyright">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12">
-				<p>
 
-                <a rel="nofollow" href="http://www.tooplate.com" target="_parent"></a></p>
-			</div>
-		</div>
-	</div>
-</div>
 
 <!-- scrolltop section -->
 <a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>

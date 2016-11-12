@@ -19,7 +19,7 @@
     <!-- google web font css -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
 
-   
+ 
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 
@@ -32,7 +32,6 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -40,6 +39,7 @@
                 <li><a href="help.php" class="smoothScroll">Help</a></li>
                 <li><a href="upload.php" class="smoothScroll">Step 1: Upload</a></li>
                 <li><a href="table.php" class="smoothScroll">Step 2: Energy Saving Tips</a></li>
+				<li><a href="table2.php" class="smoothScroll">Step 3: Home Comparisons</a></li>
             </ul>
         </div>
     </div>
@@ -93,57 +93,55 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="title">
-                    <h2>Energy Saving Tips Form</h2>
+                    <h2>Home Comparison Form</h2>
                     </div>
-					
-<?php
-	session_start();
-	$cost=$_SESSION['cost'];
-	$cost=intval($cost);
-	
-?>
-   
 
-                  <p style="font-size:18pt; font-weight:bold;"> Your current bill is $<?="$cost"?><br>
-				  Choose from the energy saving tips below to see how much they lower your bill.
+                  <p style="font-size:18pt; font-weight:bold;"> Fill out this information about your home to see energy bill comparisons to a similar house and to an energy efficient house</p>
                           
                         
 
 
 
-<form action="graph.php" method="post">
+<form action="graph2.php" method="post">
 				<center>
-					<fieldset><legend>Energy Saving Tips</legend>
+					<fieldset><legend>Home Information Form</legend>
 
 						
-						<label><strong>Using EnergyStar Products:</strong></label>
-						<select name="es">
-							<option value = "0">Using none</option>
-							<option value = ".1">Using 50%</option>
-							<option value = ".2">Using 100%</option>
-						</select>
-
-						<br>
-
-						<label><strong>Lowering your A/C 8 hrs a day:</strong></label>
-						<select name="ac">
-							<option value = "0">Not lowering</option>
-							<option value = ".15">Lowering 5 Degrees</option>
-							<option value = ".25">Lowering 10 Degrees</option>
-						</select>
-
-						<br>
-						
-						<label><strong>Lowering your window unit 8 hrs a day:</strong></label>
-						<select name="wi">
-							<option value = "0">Not lowering</option>
-							<option value = ".1">Lowering 5 Degrees</option>
-							<option value = ".2">Lowering 10 Degrees</option>
+						<label><strong>Zipcode:</strong></label>
+						<select name="zipcode">
+						<option value = "1">70501</option>
+							<option value = "2">70503</option>
+							<option value = "3">70506</option>
+							<option value = "4">70507</option>
+							<option value = "5">70508<option>
 						</select>
 						<br>
-						
-					
-					<input type="submit" value="See Savings">
+						<label><strong>House Square Footage:</strong></label>
+						<select name="squarefootage">
+							<option value = "1">0-1000</option>
+							<option value = "2">1000-2000</option>
+							<option value = "3">2000-3000</option>
+							<option value = "4"> Over 3000</option>
+						</select>
+
+						<br/>
+
+
+						<label><strong>Cooling System:</strong></label>
+						<select name="cooling">
+						<option value = "1">Central AC</option>
+						<option value = "2">In-Window AC</option>
+						<option value = "3">No AC</option>
+						</select> <br>
+
+						<label><strong>Year built:</strong></label>
+						<select name="age">
+						<option value = "1">1970s or earlier</option>
+						<option value = "2">1980s</option>
+						<option value = "3">1990s</option>
+						<option value = "4">2000 or later</option>
+						</select> <br>
+					<input type="submit" value="See Comparisons">
 					</fieldset>
 			</center>
 			</form>
@@ -166,17 +164,27 @@
     </div>
 </div>
 
-
+<div id="charts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="title">
+				<center>
+                    <h2></h2>
+					</center>
+                  </div>
+				 
+	
+			</div>
+		</div>
+	</div>	
+</div>
 
 
 
 <!-- zipcode section -->
-<div id="service">
-<br>
-<br>
-<br>
 
-</div>
+
 <!-- scrolltop section -->
 <a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
 

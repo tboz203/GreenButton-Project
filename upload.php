@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -31,13 +30,14 @@
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
+			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:60px;height:60px;"></a>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#home" class="smoothScroll">Home</a></li>
+				<li><a href="index.php" class="smoothScroll">Home</a></li>
 				<li><a href="help.php" class="smoothScroll">Help</a></li>
-				<li><a href="upload.php" class="smoothScroll">Step 1: Upload</a></li>
+				<li><a href="#service" class="smoothScroll">Step 1: Upload</a></li>
+				
 
 
 			</ul>
@@ -45,22 +45,27 @@
 	</div>
 </div>
 
-<!-- home section -->
-<div id="home">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6">
-				<h2>Welcome to</h2>
-				<h1><b>Green Button</b> Usage Comparisons</h1>
-				<p>This site provides energy saving tips and energy bill comparisons</p>
-				<a href="upload.php" class="btn btn-default smoothScroll">GET STARTED</a>
-				
-			</div>
-		</div>
-	</div>
-</div>
+
 
 <!-- login section -->
+<div id="service">
+<h1 style="margin-left:15%;"><b>Upload Page</b></h1><br>
+<p style="font-size:18pt;margin-left:10%;"><b>Step 1:</b> Upload your Green Button file</p>
+				<p style="font-size:18pt;margin-left:10%;">Questions about the Green Button File?<a href="help.php"> Visit the Help Page</a><p>
+				<p style="font-size:18pt;margin-left:10%;"><b>Step 2:</b> Choose your energy saving tips to see how much<br> money you can save</p>
+				<p style="font-size:18pt;margin-left:10%;"><b>Step 3:</b> Enter in information about your home to see the bill<br> of a similar and energy efficient home</p>
+<br>
+<br>
+<br>
+<br>
+<form action="test.php" method="post" enctype="multipart/form-data" style="margin-left:10%;font-size:18pt;">
+				<b style="font-size:18pt;">	Step 1: Select your GreenButton file to upload</b><br><br>
+					<input type="file" name="fileToUpload" id="fileToUpload"><br>
+					<input type="submit" value="Upload" name="submit">
+				</form>
+		
+
+</div>
 
 
 <!-- Daily/Weekly/Monthly section -->
@@ -96,18 +101,7 @@
 	</div>
 </div>
 
-<!-- copyright section -->
-<div class="copyright">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-sm-12">
-				<p>
 
-                <a rel="nofollow" href="http://www.tooplate.com" target="_parent"></a></p>
-			</div>
-		</div>
-	</div>
-</div>
 
 <!-- scrolltop section -->
 <a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
