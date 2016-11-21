@@ -30,7 +30,7 @@
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:60px;height:60px;"></a>
+			<a href="index.php" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
@@ -49,19 +49,18 @@
 
 <!-- login section -->
 <div id="service">
-<h1 style="margin-left:15%;"><b>Green Button Help Page</b></h1>
+<h1 style="margin-left:15%;float: left;"><b>Green Button Help Page</b></h1>
+<img style="float:right; width:50%;" src= /images/greenenergy4.jpg>
 <br>
 <br>
 <p style="font-size:18pt;">
 <ul style="font-size:18pt;">
 <li>
 The Green Button file is a secure way to get your energy usage data online.<br><br></li>
-<li>Simply, go to <a href="http://www.lus.org">www.lus.org</a> and login to your account then click on my usage.<br><br></li>
-<li>Click on the Green Button picture<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:30px;height:30px;"></a> and download data your data.</li>
-<br>
-<br>
+<li>Simply, go to <a href="http://www.lus.org">www.lus.org</a> and login to your account, then click on my usage.</li><br>
+<li>Click on the Green Button picture<img src= images/greenbutton.png atl = "GB" style="width:30px;height:30px;"> and download data your data.</li><br>
 <li>
-For more information on Green Button and for a list of all the energy <br><br>providers that offer the Green Button file visit <a href="http://www.greenbutton.org">www.greenbutton.org</a>
+For more information on Green Button and for a list of all the energy providers that offer the Green Button file visit <a href="http://www.greenbuttondata.org">www.greenbuttondata.org</a>
 </li>
 </ul>
 </p>
@@ -110,7 +109,6 @@ For more information on Green Button and for a list of all the energy <br><br>pr
 
 
 <!-- scrolltop section -->
-<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 
 <!-- javascript js -->

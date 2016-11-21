@@ -96,7 +96,7 @@
 
       var options = {
         title: "",
-        width: 600,
+        width: "100%",
         height: 400,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
@@ -118,6 +118,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
+			<a href="index.php" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -172,7 +173,7 @@
 	<center>
 
 	
-	<div id="barchart_values3" style="width: 900px; height: 300px;"></div>
+	<div id="barchart_values3" style="width: 100%; height: 300px;"></div>
 	<br>
 	<br>
 	<br>
@@ -201,7 +202,6 @@
 <!-- zipcode section -->
 
 <!-- scrolltop section -->
-<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 
 <!-- javascript js -->

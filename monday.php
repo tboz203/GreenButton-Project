@@ -7,6 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords" content="">
     <meta name="description" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!-- Open Graph meta tags -->
+        <meta property="og:title" content="<?= urldecode($_GET['title']) ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="<?= "http://www.calsots.com".$_SERVER['REQUEST_URI']; ?>" />
+        <meta property="og:image" content="<?= $_GET['image'] ?>" />
+        <meta property="og:site_name" content="Calsots.com" />
+        <meta property="fb:admins" content="MY_APP_ID" />
+        <meta property="og:description" content="<?= urldecode($_GET['description']) ?>" />
+
 
     <title>Green Button Usage Comparisons</title>
 
@@ -23,46 +34,83 @@
     <script type="text/javascript">
 <?php
 	session_start();
-	$cost=$_SESSION['cost'];
-	$cost=intval($cost);
 	
-	
+	$mon0t=$_SESSION['mon0t'];
+	$mon1t=$_SESSION['mon1t'];
+	$mon2t=$_SESSION['mon2t'];
+	$mon3t=$_SESSION['mon3t'];
+	$mon4t=$_SESSION['mon4t'];
+	$mon5t=$_SESSION['mon5t'];
+	$mon6t=$_SESSION['mon6t'];
+	$mon7t=$_SESSION['mon7t'];
+	$mon8t=$_SESSION['mon8t'];
+	$mon9t=$_SESSION['mon9t'];
+	$mon10t=$_SESSION['mon10t'];
+	$mon11t=$_SESSION['mon11t'];
+	$mon12t=$_SESSION['mon12t'];
+	$mon13t=$_SESSION['mon13t'];
+	$mon14t=$_SESSION['mon14t'];
+	$mon15t=$_SESSION['mon15t'];
+	$mon16t=$_SESSION['mon16t'];
+	$mon17t=$_SESSION['mon17t'];
+	$mon18t=$_SESSION['mon18t'];
+	$mon19t=$_SESSION['mon19t'];
+	$mon20t=$_SESSION['mon20t'];
+	$mon21t=$_SESSION['mon21t'];
+	$mon22t=$_SESSION['mon22t'];
+	$mon23t=$_SESSION['mon23t'];
 
+	
+	
+	
 ?>
     google.charts.load("current", {packages:["corechart"]});
-	google.charts.setOnLoadCallback(drawChart2);
-	
    
-  function drawChart2() {
-      var data = google.visualization.arrayToDataTable([
-        ["Element", "Amount", { role: "style" } ],
-        ["Your Bill",<?="$cost"?> , "red"],
-        ["70501", 89, "green"],
-        ["70503", 110, "blue"],
-		["70506", 107, "yellow"],
-		["70507", 83, "orange"],
-		["70508", 95, "purple"],
-      ]);
+	google.charts.setOnLoadCallback(drawChart3);
+    
+	  function drawChart3() {
+        var data = google.visualization.arrayToDataTable([
+          ['Hour', ' Monday Average'],
+          ['12am', <?="$mon0t"?>],
+          ['1am', <?="$mon1t"?>],
+          ['2am', <?="$mon2t"?>],
+          ['3am', <?="$mon3t"?>],
+		  ['4am', <?="$mon4t"?>],
+		  ['5am', <?="$mon5t"?>],
+		  ['6am', <?="$mon6t"?>],
+		  ['7am', <?="$mon7t"?>],
+		  ['8am', <?="$mon8t"?>],
+		  ['9am', <?="$mon9t"?>],
+		  ['10am', <?="$mon10t"?>],
+		  ['11am', <?="$mon11t"?>],
+		  ['12pm', <?="$mon12t"?>],
+		  ['1pm', <?="$mon13t"?>],
+		  ['2pm', <?="$mon14t"?>],
+		  ['3pm', <?="$mon15t"?>],
+		  ['4pm', <?="$mon16t"?>],
+		  ['5pm', <?="$mon17t"?>],
+		  ['6pm', <?="$mon18t"?>],
+		  ['7pm', <?="$mon19t"?>],
+		  ['8pm', <?="$mon20t"?>],
+		  ['9pm', <?="$mon21t"?>],
+		  ['10pm', <?="$mon22t"?>],
+		  ['11pm', <?="$mon23t"?>],
+		  
+		 
+        ]);
 
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
+        var options = {
+          title: '',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
 
-      var options = {
-        title: "",
-        width: 600,
-        height: 400,
-        bar: {groupWidth: "95%"},
-        legend: { position: "none" },
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+        chart.draw(data, options);
       }
-      var chart = new google.visualization.BarChart(document.getElementById("barchart_values2"));
-      chart.draw(view, options);
-  }
 
+  
   </script>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -76,7 +124,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-			<a href="index.php" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
+            <a href="index.php" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -90,9 +138,26 @@
     </div>
 </div>
 
-<!-- home section -->
+
+<!-- Tips section -->
+<div id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="title">
+                    <h2></h2>
+                    </div>
+
+                
+                     <p style="font-size:18pt; font-weight:bold;"> Step 3: Home Comparisons Page <a href="table2.php">Click Here</a></p>   
 
 
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- divider section -->
@@ -106,37 +171,25 @@
     </div>
 </div>
 
-<!-- Daily/Weekly/Monthly section -->
-
-
-<!-- team section -->
-
-
-
 <div id="charts">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="title">
-				<br>
-				<br>
 				<center>
-				<br>
-                    <h2>Zipcode Comparisons By Average Energy Bill</h2>
-					<br>
-					<p style="font-size:18pt; font-weight:bold;">Your current bill is $<?="$cost"?></p>
+                    <h2>Energy Savings Graph</h2>
 					</center>
                   </div>
 				 
 	<center>
-<img src= images/zipcode4.png atl = "zipcodes" style="width:100%;">
+
 	
+	<div id="curve_chart2" style="width: 1200px; height: 600px;"></div>
 	
-	
 	<br>
 	<br>
 	<br>
-	<br>
+	<a href="monday.php">Monday</a>
 	<p><b>Share Your Results on Social Media</b> <br>
 	<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Check out these energy saving tips!" data-hashtags="greenbutton" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	<div id="fb-root"></div>
@@ -150,6 +203,9 @@
 
 	<div class="fb-share-button" data-href="http://localhost/index.php" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%2Findex.php&amp;src=sdkpreparse">Share</a></div>
 	</p>
+	<br>
+	<br>
+	
 				  </center>
 			</div>
 		</div>
@@ -159,79 +215,10 @@
 
 
 <!-- zipcode section -->
-<div id="about" style="width: 100%;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="title">
-    <h2>Additional Average Zipcode Usage Information</h2>
-                </div>
-    <?php
 
-
-//mysqli_query($connect"INSERT INTO tablename(zip_code, sq_foot, cool_sys) VALUES('$zip_code', $sq_foot', '$cool_sys')");
-
-    $user = 'greenbutton';
-    $pass = 'greenbutton';
-    $db = new PDO('mysql:host=localhost;dbname=greenbutton', $user, $pass);
-    ?>
-    
-    <center>
-    <table id="zip">
-
-        <tr>
-            <td class="zip"><strong>Lafayette Zipcode</strong></td>
-            <td class="daily"><strong>Daily Average $</strong></td>
-            <td class="weekly"><strong>Weekly Average $</strong></td>
-            <td class="monthly"><strong>Monthly Average $</strong></td>
-            <td class="rooms"><strong>Average # of Household Rooms</strong></td>
-            <td class="size"><strong>Average Size of House (Sq/Ft)</strong></td>
-        </tr>
-
-        <?php
-
-
-        $sql2 = "SELECT *";
-        $sql2.= "FROM zipcodes";
-
-        $i = 0;
-
-        foreach($db->query($sql2) as $row){
-            echo "<tr><td class=\"zip\">";
-            echo $row['zip'];
-            echo "</td><td class=\"daily\">";
-            echo $row['daily']*.08;
-            echo "</td><td class=\"weekly\">";
-            echo $row['weekly']*.08;
-            echo "</td><td class=\"monthly\">";
-            echo $row['monthly']*.08;
-            echo "</td><td class=\"rooms\">";
-            echo $row['rooms'];
-            echo "</td><td class=\"size\">";
-            echo $row['size'];
-            echo "</td></tr>";
-            $i++;
-        }
-
-        $dbh = null;
-        ?>
-
-    </table>
-	</center>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	
-	
-
-</div
-                </div>
-            </div>
-</div>
 
 <!-- scrolltop section -->
+
 
 
 <!-- javascript js -->

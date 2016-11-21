@@ -32,6 +32,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
+			<a href="index.php" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -163,7 +164,12 @@
         <div class="col-md-1 col-sm-1"></div>
     </div>
 </div>
+<div id="service">
+<br>
+<br>
+<br>
 
+</div>
 <div id="charts">
     <div class="container">
         <div class="row">
@@ -186,8 +192,6 @@
 
 
 <!-- scrolltop section -->
-<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
-
 
 <!-- javascript js -->
 <script src="js/jquery.js"></script>

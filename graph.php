@@ -42,6 +42,9 @@
 	$fri=$_SESSION['friday'];
 	$sat=$_SESSION['saturday'];
 	$sun=$_SESSION['sunday'];
+	
+
+	
 	$cost=intval($cost);
 	$es=$_POST["es"];
 	$ac=$_POST["ac"];
@@ -54,13 +57,20 @@
 	$savings=$cost*$savingsnumber;
 	$newbill=($cost-$savings);
 	$ratio=($newbill/$cost);
-	$newmon=($ratio*$mon);
-	$newtue=($ratio*$tue);
-	$newwed=($ratio*$wed);
-	$newthu=($ratio*$thu);
-	$newfri=($ratio*$fri);
-	$newsat=($ratio*$sat);
-	$newsun=($ratio*$sun);
+	$newmon=($ratio*$mon/15);
+	$newtue=($ratio*$tue/15);
+	$newwed=($ratio*$wed/15);
+	$newthu=($ratio*$thu/15);
+	$newfri=($ratio*$fri/15);
+	$newsat=($ratio*$sat/15);
+	$newsun=($ratio*$sun/15);
+	$amon=$mon/15;
+	$atue=$tue/15;
+	$awed=$wed/15;
+	$athu=$thu/15;
+	$afri=$fri/15;
+	$asat=$sat/15;
+	$asun=$sun/15;
 	
 	
 ?>
@@ -86,8 +96,8 @@
 
       var options = {
         title: "",
-        width: 600,
-        height: 400,
+        width: "100%",
+        height: 500,
         bar: {groupWidth: "95%"},
         legend: { position: "none" },
       };
@@ -95,58 +105,21 @@
       chart.draw(view, options);
   }
   
-      function drawChart2() {
-      var data = google.visualization.arrayToDataTable([
-        ["Element", "Amount", { role: "style" } ],
-        ["Monday",<?="$mon"?> , "red"],
-        ["Tuesday", <?="$tue"?>, "red"],
-        ["Wednesday", <?="$wed"?>, "red"],
-		["Thursday", <?="$thu"?>, "red"],
-		["Friday", <?="$fri"?>, "red"],
-		["Saturday", <?="$sat"?>, "red"],
-		["Sunday", <?="$sun"?>, "red"],
-		["Monday",<?="$newmon"?> , "green"],
-        ["Tuesday", <?="$newtue"?>, "green"],
-        ["Wednesday", <?="$newwed"?>, "green"],
-		["Thursday", <?="$newthu"?>, "green"],
-		["Friday", <?="$newfri"?>, "green"],
-		["Saturday", <?="$newsat"?>, "green"],
-		["Sunday", <?="$newsun"?>, "green"],
-      ]);
 
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
-      var options = {
-        title: "",
-        width: 1000,
-        height: 750,
-        bar: {groupWidth: "95%"},
-        legend: { position: "none" },
-      };
-      var chart = new google.visualization.LineChart(document.getElementById("barchart_values2"));
-      chart.draw(view, options);
-  }
-  
-  function drawChart3() {
+  function drawChart2() {
         var data = google.visualization.arrayToDataTable([
           ['Day', ' Current Average', 'Savings Average'],
-          ['Monday',  <?="$mon"?>,      <?="$newmon"?>],
-          ['Tuesday',  <?="$tue"?>,      <?="$newtue"?>],
-          ['Wednesday',  <?="$wed"?>,       <?="$newwed"?>],
-          ['Thursday',  <?="$thu"?>,      <?="$newthu"?>],
-		  ['Friday',  <?="$fri"?>,      <?="$newfri"?>],
-		  ['Saturday',  <?="$sat"?>,      <?="$newsat"?>],
-		  ['Sunday',  <?="$sun"?>,      <?="$newsun"?>],
+          ['Monday',  <?="$amon"?>,      <?="$newmon"?>],
+          ['Tuesday',  <?="$atue"?>,      <?="$newtue"?>],
+          ['Wednesday',  <?="$awed"?>,       <?="$newwed"?>],
+          ['Thursday',  <?="$athu"?>,      <?="$newthu"?>],
+		  ['Friday',  <?="$afri"?>,      <?="$newfri"?>],
+		  ['Saturday',  <?="$asat"?>,      <?="$newsat"?>],
+		  ['Sunday',  <?="$asun"?>,      <?="$newsun"?>],
         ]);
 
         var options = {
-          title: 'Company Performance',
+          title: '',
           curveType: 'function',
           legend: { position: 'bottom' }
         };
@@ -156,6 +129,8 @@
         chart.draw(data, options);
       }
 
+	  
+	 
   
   </script>
 </head>
@@ -170,7 +145,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            
+            <a href="index.php" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -227,25 +202,48 @@
 					</center>
                   </div>
 				 
+	
 	<center>
+	<div id="barchart_values" style="width: 100%; height: 500px;"></div>
+	</center>
+	<br>
+	<br>
+	<br>
+	<br>
+	<center>
+                    <h2>Daily Savings Comparison Graph</h2>
+					
 
-	<div id="barchart_values" style="width: 900px; height: 300px;"></div>
-	
+	<div id="curve_chart" style="width: 100%;height: 500px"></div>
+	</center>
 	<br>
 	<br>
+<center>
+                    <h2>Hourly Energy Cost Graph</h2>
+					<form action="hourly.php" method="post">
+				
+					<fieldset><legend>Day Selector</legend>
+					<label><strong>Day of the Week</strong></label>
+						<select name="day">
+						<option value = "1">Monday</option>
+						<option value = "2">Tuesday</option>
+						<option value = "3">Wednesday</option>
+						<option value = "4">Thursday</option>
+						<option value = "5">Friday</option>
+						<option value = "6">Saturday</option>
+						<option value = "7">Sunday</option>
+						</select> <br>
+						
+					<input type="submit" value="See Hourly Usage">
+					</fieldset>
+						
+			</form>
+					
+					
+					</center>
+
 	<br>
-	<br>
-	
-<div id="barchart_values2" style="width: 1200px; height: 600px;"></div>
-	<br>
-	<br>
-	<br>
-	
-	<div id="curve_chart" style="width: 1200px; height: 600px;"></div>
-	
-	<br>
-	<br>
-	<br>
+	<center>
 	<p><b>Share Your Results on Social Media</b> <br>
 	<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Check out these energy saving tips!" data-hashtags="greenbutton" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	<div id="fb-root"></div>
@@ -274,7 +272,7 @@
 
 
 <!-- scrolltop section -->
-<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
 
 
 <!-- javascript js -->

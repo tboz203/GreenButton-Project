@@ -31,7 +31,7 @@
 				<span class="icon icon-bar"></span>
 				<span class="icon icon-bar"></span>
 			</button>
-			<a href="#home" class="navbar-brand smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
+			<a href="#home" class="btn btn-default smoothScroll"><img src= images/greenbutton.png atl = "GB" style="width:50px;height:50px;"></a>
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
@@ -47,17 +47,21 @@
 
 <!-- home section -->
 <div id="home">
+
 	<div class="container">
 		<div class="row">
-			<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6">
+		<img style="float:left; width:50%;" src= /images/greenenergy4.jpg>
+			<div style="float:right;">
+			 
 				<h2>Welcome to</h2>
-				<h1><b>Green Button</b> Usage Comparisons</h1>
+				<h1><b>Green Button</b><br> Usage Comparisons</h1>
 				<p>This site provides energy saving tips and energy bill comparisons</p>
 				<a href="upload.php" class="btn btn-default smoothScroll">GET STARTED</a>
 				
 			</div>
 		</div>
 	</div>
+	
 </div>
 
 <!-- login section -->
@@ -110,7 +114,7 @@
 </div>
 
 <!-- scrolltop section -->
-<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
 
 
 <!-- javascript js -->
