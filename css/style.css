@@ -134,11 +134,11 @@ border: solid #000000 1px;
 /* home section */
 #home {
   
-  background-size: 30%;
-  background-position: left;
-  min-height: 600px;
-  padding-top: 220px;
-  padding-bottom: 100px;
+  /* background-size: 30%; */
+  /* background-position: left; */
+  /* min-height: 600px; */
+  padding-top: 100px;
+  /* padding-bottom: 100px; */
 }
 #home h1 {
   color: #f2af00;
@@ -169,6 +169,10 @@ border: solid #000000 1px;
   background: #dc5034;
   border-color: transparent;
   color: #fff;
+}
+
+div.navbar a.btn {
+    border-color: transparent;
 }
 
 /* service section */

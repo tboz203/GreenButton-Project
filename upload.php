@@ -48,23 +48,28 @@
 
 
 <!-- login section -->
-<div id="service">
-<img style="float:right; width:50%;" src= /images/greenenergy4.jpg>
-<h1 style="margin-left:15%;"><b>Upload Page</b></h1><br>
-<p style="font-size:18pt;margin-left: 2%;"><b>Step 1:</b> Upload your Green Button file</p>
-				<p style="font-size:18pt;margin-left: 2%;">Questions about the Green Button File?<a href="help.php"> Visit the Help Page</a><p>
-				<p style="font-size:18pt;margin-left: 2%;"><b>Step 2:</b> Choose your energy saving tips to see how much<br> money you can save</p>
-				<p style="font-size:18pt;margin-left: 2%;"><b>Step 3:</b> Enter in information about your home to see the bill<br> of a similar and energy efficient home</p>
-				<p style="font-size:18pt;margin-left: 2%;"><b>Step 4:</b> Compare bill by zip code</p>
-<br>
-<br>
-<form action="test.php" method="post" enctype="multipart/form-data" style="margin-left:10%;font-size:18pt;">
-				<b style="font-size:18pt;">	Step 1: Select your GreenButton file to upload</b><br><br>
-					<input type="file" name="fileToUpload" id="fileToUpload"><br>
-					<input type="submit" value="Upload" name="submit">
-				</form>
-		
-
+<div id="service" class="container">
+    <h1><b>Upload Page</b></h1>
+    <div class="row">
+        <!-- hidden on large screens, full width for small -->
+        <img class="img-responsive img-rounded hidden-md hidden-lg col-xs-12" src="/images/greenenergy4.jpg" />
+        <div class="col-sm-12 col-md-6">
+            <p style="font-size:18pt;margin-left: 2%;"><b>Step 1:</b> Upload your Green Button file</p>
+            <p style="font-size:18pt;margin-left: 2%;">Questions about the Green Button File?<a href="help.php"> Visit the Help Page</a><p>
+            <p style="font-size:18pt;margin-left: 2%;"><b>Step 2:</b> Choose your energy saving tips to see how much<br> money you can save</p>
+            <p style="font-size:18pt;margin-left: 2%;"><b>Step 3:</b> Enter in information about your home to see the bill<br> of a similar and energy efficient home</p>
+            <p style="font-size:18pt;margin-left: 2%;"><b>Step 4:</b> Compare bill by zip code</p>
+            <br>
+            <br>
+            <form action="test.php" method="post" enctype="multipart/form-data" style="margin-left:10%;font-size:18pt;">
+                <b style="font-size:18pt;">Step 1: Select your GreenButton file to upload</b><br><br>
+                <input class="btn btn-default" type="file" name="fileToUpload" id="fileToUpload"><br>
+                <input class="btn btn-default" type="submit" value="Upload" name="submit">
+            </form>
+        </div>
+        <!-- hidden on small screens, on right side for medium & up -->
+        <img class="img-responsive img-rounded hidden-xs hidden-sm col-md-6" src="/images/greenenergy4.jpg" />
+    </div>
 </div>
 
 
